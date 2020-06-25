@@ -95,7 +95,7 @@ class Presentational extends Component {
 
 // map states to props
 
-const mapStateToProps = state => {count: state}
+const mapStateToProps = state => { return { count: state}}
 
 // map dispatch to prosp
 const mapDispatchToProps = dispatch => {
