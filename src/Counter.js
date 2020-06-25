@@ -86,7 +86,7 @@ class Presentational extends Component {
           +
         </button>
         <button className="btn" onClick={this.reset}>
-          Reset
+          RESET
         </button>
         <button className="btn" onClick={this.decrement}>
           -
