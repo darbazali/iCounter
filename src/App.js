@@ -1,11 +1,11 @@
 import React from "react";
 import { render } from "react-dom";
-
+import Counter from './Counter';
 
 const App = () => {
   return (
     <div>
-      <h1>Hello React!</h1>
+      <Counter />
     </div>
   );
 };
