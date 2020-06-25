@@ -76,3 +76,16 @@ body {
 .btn:hover {
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.212);
 }
+
+#copyright {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 200px;
+    font-size: 14px;
+}
+
+#copyright a {
+    color: rgb(72, 106, 141);
+}
