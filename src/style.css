@@ -22,11 +22,17 @@ body {
     width: 90%;
     max-width: 600px;
     height: 334px;
+
+    
     border-radius: 30px;
     background: transparent;
-    backdrop-filter: blur(18px);
-    --webkit-backdrop-filter: blur(18px);
-    background-color: rgba(255, 255, 255, 0.14);
+    box-shadow: 0px 7px 20px rgba(0, 0, 0, 0.089);
+    /* Note: currently only Safari supports backdrop-filter */
+    backdrop-filter: blur(17.497900009155273px);
+    --webkit-backdrop-filter: blur(17.497900009155273px);
+    background-color: rgba(255, 255, 255, 0.178);
+
+
     position: absolute;
     top: 50%;
     left: 50%;
