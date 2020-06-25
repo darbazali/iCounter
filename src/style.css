@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap');
+
 body {
     color: hsl(0, 0%, 21%);
-    font-family: Rubik, Helvetica, sans-serif;
+    font-family: 'Rubik', sans-serif;
     padding: 0;
     margin: 0;
 }
