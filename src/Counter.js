@@ -78,7 +78,7 @@ class Presentational extends Component {
 
   render() {
     return (
-      <div>
+      <div id="counter">
 
         <h3>Count your moments</h3>
         <h1>{this.props.count}</h1>

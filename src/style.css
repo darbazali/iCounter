@@ -1,14 +1,70 @@
 body {
     color: hsl(0, 0%, 21%);
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Rubik, Helvetica, sans-serif;
     padding: 0;
     margin: 0;
 }
 
 
 #root {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: linear-gradient(#f5cd95 0%, #e68383 100%);
+
+}
+
+
+#counter {
     width: 90%;
-    margin: 0 auto;
-    background-color: rgb(241, 241, 241);
-    padding: 40px;
+    max-width: 600px;
+    height: 334px;
+    border-radius: 30px;
+    background: transparent;
+    backdrop-filter: blur(18px);
+    --webkit-backdrop-filter: blur(18px);
+    background-color: rgba(255, 255, 255, 0.14);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+#counter h3 {
+    opacity: 0.9;
+    font-weight: 400;
+}
+
+#counter h1 {
+    font-weight: 500;
+    font-size: 120px;
+    text-align: center;
+    color: #a85d50;
+    margin: 0;
+
+}
+
+
+.btn {
+    border: none;
+    padding: 10px 20px;
+    border-radius: 7px;
+    background: linear-gradient(#ada0cb 0%, #574c83 100%);
+    font-weight: 500;
+    font-size: 24px;
+    text-align: center;
+    color: #fff;
+    text-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+    margin-left: 10px;
+    outline: none;
+    cursor: pointer;
+    transition: all 300ms ease;
+}
+
+.btn:hover {
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.212);
 }
