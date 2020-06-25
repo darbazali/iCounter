@@ -1,8 +1,4 @@
-## React Sterter Kit
-A simple React.js Starter Kit for fast development.
+# React Counter
+### A beautiful Counter application with React and Redux
 
-### Scripts
-**dev** for development env
-**format** runs prettier plugin
-**lint** eslint
-
+![Alt text](assets/Counter_App.png "Counter Application")
