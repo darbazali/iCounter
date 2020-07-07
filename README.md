@@ -1,6 +1,6 @@
-# React Counter
-### A beautiful Counter application with React and Redux
+# iCounter
+A fully functional Counter application with React, React Hooks, and Redux
 
-![Alt text](assets/Counter_App.png "Counter Application")
+![Alt text](banner.png "Counter Application")
 
 
