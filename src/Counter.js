@@ -1,137 +1,28 @@
-import React, { Component } from "react";
-import { createStore } from "redux";
-import { connect, Provider } from "react-redux";
+import React, { useState } from 'react'
 
-/*=====================
-  REDUX CODE
-=====================*/
 
-// Actions
-const INCREMENT = "INCREMENT";
-const DECREMENT = "DECREMENT";
-const RESET = "RESET";
 
-// Action Creators
-const incAction = () => {
-  return {
-    type: INCREMENT,
-  };
-};
+export default function Counter() {
+  const [count, setCount] = useState(0);
 
-const decAction = () => {
-  return {
-    type: DECREMENT,
-  };
-};
-
-const resetAction = () => {
-  return {
-    type: RESET,
-  };
-};
-
-// REDUCER
-const counterReducer = (state = 0, action) => {
-  switch (action.type) {
-    case INCREMENT:
-      return state + 1;
-    case DECREMENT:
-      return state - 1;
-    case RESET:
-      return (state = 0);
-    default:
-      return state;
-  }
-};
-
-const store = createStore(counterReducer);
-
-/*=====================
-  REACT CODE
-=====================*/
-
-// handle state localy
-class Presentational extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      
-    };
-
-    this.increment = this.increment.bind(this);
-    this.decrement = this.decrement.bind(this);
-    this.reset = this.reset.bind(this);
+  function increment() {
+    setCount( count + 1)
   }
 
-  increment() {
-    this.props.incrementCount(this.state.count);
+  function decrement() {
+    setCount( count - 1)
   }
 
-  decrement() {
-    this.props.decrementCount(this.state.count);
+  function reset() {
+    setCount(0)
   }
-
-  reset() {
-    this.props.resetCount(this.state.count);
-  }
-
-  render() {
-    return (
-      <div id="counter">
-
-        <h3>Count your moments</h3>
-        <h1>{this.props.count}</h1>
-        <button className="btn" onClick={this.increment}>
-          +
-        </button>
-        <button className="btn" onClick={this.reset}>
-          RESET
-        </button>
-        <button className="btn" onClick={this.decrement}>
-          -
-        </button>
-
-        
-      </div>
-    );
-  }
-}
-
-/*=====================
-  REACT-REDUX CODE
-=====================*/
-
-// map states to props
-const mapStateToProps = (state) => {
-  return { count: state };
-};
-
-// map dispatch to props
-const mapDispatchToProps = (dispatch) => {
-  return {
-    incrementCount: function () {
-      dispatch(incAction());
-    },
-
-    decrementCount: function () {
-      dispatch(decAction());
-    },
-
-    resetCount: function () {
-      dispatch(resetAction());
-    },
-  };
-};
-
-const Container = connect(mapStateToProps, mapDispatchToProps)(Presentational);
-
-export default class Counter extends Component {
-  render() {
-    return (
-      <Provider store={store}>
-        <Container />
-      </Provider>
-    );
-  }
+  return (
+    <div id="counter">
+      <p>Count your moments</p>
+      <h1>{count}</h1>
+      <button onClick={decrement}>-</button>
+      <button onClick={reset}>RESET</button>
+      <button onClick={increment}>+</button>
+    </div>
+  )
 }
